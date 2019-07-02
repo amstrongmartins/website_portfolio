@@ -30,5 +30,6 @@ h3 {
   &.small-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.2);
   }
 }
