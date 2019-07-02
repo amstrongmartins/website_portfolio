@@ -1,5 +1,9 @@
 $primary-color: #444;
 
+html {
+  font-size: 10px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,4 +11,24 @@ $primary-color: #444;
 body {
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.header-hero {
+    font-size: 6rem;
+  }
+
+  &.small-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+  }
 }
