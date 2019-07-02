@@ -39,8 +39,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
+  opacity: 0.9;
 
   &.show {
     visibility: visible;
@@ -58,6 +58,7 @@
     overflow: hidden;
   }
 
+  //Nav side
   &-nav {
     margin: 0;
     padding: 0;
@@ -67,7 +68,64 @@
     @include easeOut;
 
     &.show {
+      //Slide do topo
       transform: translate3d(0, 0, 0);
     }
+  }
+
+  //Brand side
+  &-brand {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      //Slide de baixo
+      transform: translate3d(0, 0, 0);
+    }
+
+    .image-brand {
+      width: 250px;
+      height: 250px;
+      background: url("../img/image.jpg");
+      background-size: cover;
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
