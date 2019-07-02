@@ -1,0 +1,14 @@
+{
+  "name": "website_portfolio",
+  "version": "1.0.0",
+  "description": "Website Portfolio responsivo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Amstrong Martins",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
