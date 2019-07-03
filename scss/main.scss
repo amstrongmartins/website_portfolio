@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "mobile";
 
 html {
   font-size: 10px;
@@ -12,7 +13,7 @@ html {
 body {
   @include background;
   background: $primary-color;
-  color: #fff;
+  color: set-color-text($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -37,7 +38,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: set-color-text($primary-color);
   text-decoration: none;
 }
 
